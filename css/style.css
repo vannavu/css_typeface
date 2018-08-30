@@ -125,6 +125,10 @@ html {
   left: 20%;
 }
 
+#i .vleft {
+  left: 50%;
+}
+
 #o.glyph {
   width: calc(var(--glyph_width) * 0.9);
 }
