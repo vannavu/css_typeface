@@ -351,3 +351,10 @@ body {
   width: 95%;
   right: 0;
 }
+
+@media only screen and (max-width: 1300px) {
+  .glyph {
+    margin: -0.19rem;
+    margin-bottom: 1.2rem;
+  }
+}
