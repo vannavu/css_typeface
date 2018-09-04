@@ -22,10 +22,10 @@ body {
 .glyph {
   position: relative;
   display: inline-block;
-  width: var(--glyph_width);
-  height: var(--glyph_height);
-  margin: 0.2rem;
-  margin-bottom: 1rem;
+  width: calc(var(--glyph_width));
+  height: calc(var(--glyph_height));
+  margin: calc(0.2rem);
+  margin-bottom: calc(1rem);
 }
 
 .htop, .hmiddle, .hbottom, .vleft, .vmiddle, .vright, .left, .right, .top, .bottom {
@@ -267,8 +267,8 @@ body {
 
 #m .hbottom.middle {
   position: absolute;
-  left: 38%;
-  width: 23.5%;
+  left: 38.75%;
+  width: 23%;
   height: var(--hstroke);
 }
 
@@ -320,25 +320,37 @@ body {
   left: 20%;
 }
 
+#r.glyph {
+  width: calc(var(--glyph_width) * 1.18);
+}
+
+#r .htop {
+  width: 86%;
+}
+
 #r .hmiddle {
-  left: 20%;
-  width: 80%;
+  left: 17%;
+  width: 69%;
 }
 
 #r .hbottom.left {
-  width: 53.5%;
+  width: 52%;
 }
 
 #r .hbottom.right {
-  width: 41.5%;
+  width: 44%;
 }
 
 #r .vleft {
-  left: 20%;
+  left: 17%;
+}
+
+#r .vright.top {
+  right: 14%;
 }
 
 #r .vright.bottom {
-  right: 22%;
+  right: 26%;
 }
 
 #q .vleft.bottom {
@@ -410,6 +422,41 @@ body {
   right: 21%;
 }
 
+#w.glyph {
+  width: calc(var(--glyph_width) * 1.35);
+}
+
+#w .htop.left, #w .htop.right {
+  width: 35%;
+}
+
+#w .htop.middle {
+  position: absolute;
+  left: 39%;
+  width: 22.5%;
+  height: var(--hstroke);
+}
+
+#w .hbottom {
+  left: 14%;
+  width: 72%;
+}
+
+#w .vleft {
+  left: 14%;
+}
+
+#w .vmiddle {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  width: 1px;
+}
+
+#w .vright {
+  right: 14%;
+}
+
 #x.glyph {
   width: calc(var(--glyph_width) * 1.15);
 }
@@ -437,6 +484,36 @@ body {
 
 #x .vright.bottom {
   right: 16%;
+}
+
+#y.glyph {
+  width: calc(var(--glyph_width) * 1.2);
+}
+
+#y .htop.left, #y .htop.right {
+  width: 48%;
+}
+
+#y .hmiddle {
+  width: 68%;
+  right: 16%;
+}
+
+#y .hbottom {
+  width: 50%;
+  left: 25%;
+}
+
+#y .vleft.top {
+  left: 16%;
+}
+
+#y .vleft.bottom {
+  left: 50%;
+}
+
+#y .vright.top {
+  right: 16%;`
 }
 
 #z .hmiddle {
@@ -525,11 +602,8 @@ body {
   right: 0;
 }
 
-/*
 @media only screen and (max-width: 1300px) {
   .glyph {
-    margin: -0.19rem;
-    margin-bottom: 1.2rem;
+    margin: 0.19rem -0.19rem;
   }
 }
-*/
