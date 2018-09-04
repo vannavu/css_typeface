@@ -533,8 +533,8 @@ body {
 }
 
 #zero .hmiddle {
-  width: 20%;
-  left: 40%;
+  width: 21%;
+  left: 39.5%;
 }
 
 #one.glyph {
@@ -584,6 +584,24 @@ body {
   width: 95%;
 }
 
+#seven.glyph {
+  width: calc(var(--glyph_width) * 0.95);
+}
+
+#seven .hmiddle {
+  width: 21.5%;
+  right: 7%;
+}
+
+#seven .hbottom {
+  width: 52%;
+  right: 0;
+}
+
+#seven .vright {
+  right: 16%;
+}
+
 #eight .htop {
   left: 12%;
   width: 76%;
@@ -602,6 +620,7 @@ body {
   right: 0;
 }
 
+/*
 @media only screen and (max-width: 1300px) {
   .glyph {
     margin: 0.19rem -0.19rem;
