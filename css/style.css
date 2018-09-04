@@ -620,9 +620,30 @@ body {
   right: 0;
 }
 
-/*
+@media only screen and (max-width: 1350px) {
+  .wrapper {
+    transform: rotate(90deg);
+    width: 50%;
+  }
+}
+
 @media only screen and (max-width: 1300px) {
+  .wrapper {
+    transform: rotate(0deg);
+    width: 100%;
+    margin: 2em;
+  }
   .glyph {
     margin: 0.19rem -0.19rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  :root {
+    --glyph_width: 10%;
+    --glyph_height: 30vh;
+  }
+  .glyph {
+    margin: 0.2rem;
   }
 }
