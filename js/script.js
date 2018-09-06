@@ -30,6 +30,11 @@ $(document).ready(function(){
     });
   });
 
-
+  $(".no_v").click(function() {
+    $(".glyph.no_v .vleft, .glyph.no_v .vright").animate({
+      opacity: 0,
+    }, 1000, function() {
+    });
+  });
 
 });
