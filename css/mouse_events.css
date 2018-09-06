@@ -1,0 +1,29 @@
+#zero .hmiddle.slide {
+  left: 5%;
+  transition: left 1s;
+}
+
+#zero.glyph:hover .hmiddle.slide {
+  left: 39.5%;
+  transition: left 1s;
+}
+
+#zero .hmiddle.rotate {
+  transform: rotate(0deg);
+  transition: transform 3s;
+}
+
+#zero.glyph:hover .hmiddle.rotate {
+  transform: rotate(360deg);
+  transition: transform 1.5s;
+}
+
+.skew {
+  transform: skewX(-40deg);
+  transition: transform 1s;
+}
+
+.skew:hover {
+  transform: skewX(40deg);
+  transition: transform 1s;
+}
