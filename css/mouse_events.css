@@ -20,10 +20,30 @@
 
 .skew {
   transform: skewX(-40deg);
-  transition: transform 1s;
+  transition: transform 7s;
 }
 
 .skew:hover {
-  transform: skewX(40deg);
+  transform: skewX(360deg);
+  transition: transform 4s;
+}
+
+.spin {
+  transform: rotate(-1800deg);
   transition: transform 1s;
+}
+
+.spin:hover {
+  transform: rotate(360deg);
+  transition: transform 8s;
+}
+
+.scale {
+  transform: scale(1);
+  transition: transform 2s;
+}
+
+.scale:hover {
+  transform: scale(2.8);
+  transition: transform 2s;
 }
