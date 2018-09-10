@@ -14,11 +14,11 @@ $(document).ready(function(){
   });
 
   $(".oh").hover(function() {
-    $(".oh .hmiddle").animate({
+    $(".oh .hmiddle, #h").animate({
       width: '21%',
     }, 500, function() {
     });
-    $(".oh .hmiddle").animate({
+    $(".oh .hmiddle, #h").animate({
       width: '0%',
     }, 1000, function() {
     });
@@ -246,6 +246,20 @@ $(document).ready(function(){
     });
   });
 
+  $(".wide_all").mousedown(function() {
+    $(".glyph" ).animate({
+      width: '30rem',
+    }, 5000, function() {
+    });
+  });
+
+  $(".wide_all").mouseleave(function() {
+    $(".glyph" ).animate({
+      width: '14rem',
+    }, 5000, function() {
+    });
+  });
+
   $(".wide_wrap").click(function() {
     $(".wrapper" ).css({
       width: '4000px',
@@ -344,4 +358,231 @@ $(document).ready(function(){
     }, 1500, function() {
     });
   });
+
+  $(".shift_top").click(function() {
+    $(".htop").css({
+      'transform': 'translate(-40px)',
+      'transition': 'transform 1s',
+    });
+  });
+
+  $(".shift_middle").click(function() {
+    $(".hmiddle").css({
+      'transform': 'translate(-20px)',
+      'transition': 'transform 1s',
+    });
+  });
+
+  $(".shift_bottom").click(function() {
+    $(".hbottom").css({
+      'transform': 'translate(20px)',
+      'transition': 'transform 1s',
+    });
+  });
+
+  $(".rotate_all").hover(function() {
+    $(".glyph").css({
+      'transform': 'rotate(2880deg)',
+      'transition': 'transform 5s',
+    });
+  });
+
+  $(".scale_down_all").click(function() {
+    $(".glyph").css({
+      'transform': 'scale(0.4)',
+      'transition': 'transform 1s',
+    });
+  });
+
+  $(".alt_s").click(function() {
+    $(this).css({
+      width: '7rem',
+      'transform': 'rotate(90deg)',
+      'transition': 'transform 1s',
+    });
+    $(".jag").css({
+      width: '7rem',
+      'transform': 'rotate(90deg)',
+      'transition': 'transform 2s',
+    });
+  });
+
+  $(".extend").click(function() {
+    $(this).animate({
+      width: '1000%',
+      backgroundColor: 'yellow',
+    }, 1000, function() {
+    });
+  });
+
+  $(".thin").click(function() {
+    $(".thin .htop, .thin .hmiddle, .thin .hbottom").animate({
+      height: '1px',
+    }, 500, function() {
+    });
+  });
+
+  $(".thin_all").click(function() {
+    $(".hmiddle").css({
+      'top': '50%',
+    });
+    $(".vleft.top, .vleft.bottom, .vright.top, .vright.bottom").css({
+      height: '50%',
+    });
+    $(" .htop, .hmiddle, .hbottom").animate({
+      height: '1px',
+    }, 1000, function() {
+    });
+  });
+
+  $(".no_h_all").click(function() {
+    $(".htop, .hmiddle, .hbottom").animate({
+      opacity: 0,
+    }, 1000, function() {
+    });
+  });
+
+  $(".htop.disappear").click(function() {
+    $(".htop").animate({
+      opacity: 0,
+    }, 1000, function() {
+    });
+  });
+
+  $(".hmiddle.disappear").click(function() {
+    $(".hmiddle").animate({
+      opacity: 0,
+    }, 1000, function() {
+    });
+  });
+
+  $(".hbottom.disappear").click(function() {
+    $(".hbottom").animate({
+      opacity: 0,
+    }, 1000, function() {
+    });
+  });
+
+  $(".htop.red").click(function() {
+    $(".htop").animate({
+      backgroundColor: 'red',
+    }, 1000, function() {
+    });
+  });
+
+  $(".hmiddle.lime").click(function() {
+    $(".hmiddle").animate({
+      backgroundColor: 'lime',
+    }, 1000, function() {
+    });
+  });
+
+  $(".hbottom.blue").click(function() {
+    $(".hbottom").animate({
+      backgroundColor: 'blue',
+    }, 1000, function() {
+    });
+  });
+
+  $(".appear").hover(function() {
+    $(".appear #a, .appear #p, .appear #e").css({
+      'display': 'inline-block',
+    });
+  });
+
+  $(".rounded").click(function() {
+    $(".rounded .htop").css({
+      'border-top-left-radius': '3rem',
+    });
+    $(".rounded .hbottom").css({
+      'border-bottom-right-radius': '3rem',
+    });
+  });
+
+  $(".sausage").click(function() {
+    $(".htop, .hmiddle, .hbottom").css({
+      'border-radius': '1rem',
+        'transition': 'border-radius 4s'
+    });
+  });
+
+  $(".hamburger").click(function() {
+    $(".htop").css({
+      'border-top-left-radius': '4rem',
+      'border-top-right-radius': '4rem',
+      'transition': 'border-radius 5s'
+    });
+    $(".hbottom").css({
+      'border-bottom-left-radius': '4rem',
+      'border-bottom-right-radius': '4rem',
+      'transition': 'border-radius 5s'
+    });
+  });
+
+  $(".flip").click(function() {
+    $(".glyph").css({
+      'transform': 'scaleY(-1)',
+      'transition': 'transform 2s'
+    });
+  });
+
+  $(".thin_middle").click(function() {
+    $(".hmiddle").css({
+      height: '1px',
+      'top': '50%',
+      'transition': 'height 1s'
+    });
+    $(".vleft.top, .vleft.bottom, .vright.top, .vright.bottom").css({
+      height: '50%',
+      'transition': 'height 1s'
+    });
+  });
+
+  $(".counter").click(function() {
+    $(".glyph").animate({
+      backgroundColor: 'black',
+    }, 1000, function() {
+    });
+    $(".htop, .hmiddle, .hbottom, .vleft, .vright, .vmiddle" ).animate({
+      backgroundColor: 'white',
+    }, 1000, function() {
+    });
+  });
+
+  $(".narrow").click(function() {
+    $(".glyph").animate({
+      width: '2rem',
+    }, 1000, function() {
+    });
+    $(".glyph").css({
+      'transform': 'scale(2)',
+      margin: '5rem',
+      'transition': 'transform 2s, margin 2s'
+    });
+  });
+
+  $(".extend_top").click(function() {
+    $(".htop").animate({
+      width: '300%',
+      backgroundColor: 'yellow',
+    }, 1000, function() {
+    });
+  });
+
+  $(".extend_bottom").click(function() {
+    $(".hbottom").css({
+      'right': '0',
+    });
+    $(".hbottom").animate({
+      width: '300%',
+      backgroundColor: 'yellow',
+    }, 1000, function() {
+    });
+  });
+
+
+
+
+
+
 });

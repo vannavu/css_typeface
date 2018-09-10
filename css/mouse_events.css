@@ -47,3 +47,42 @@
   transform: scale(2.8);
   transition: transform 2s;
 }
+
+.scale_down {
+  transform: scale(1);
+  transition: transform 1s;
+}
+
+.scale_down:hover {
+  transform: scale(0.45);
+  transition: transform 2s;
+}
+
+.translate {
+  transform: translate(50px);
+  transition: transform 2s;
+}
+
+.translate:hover {
+  transform: translate(-50px);
+  transition: transform 2s;
+}
+
+.collapse {
+  height: 6.25rem;
+  transition: height 1s;
+}
+
+.collapse:hover {
+  height: 4rem;
+  transition: height 1s;
+}
+
+.appear #a, .appear #p, .appear #e {
+  display: none;
+}
+
+.flip:hover {
+  transform: scaleY(-1);
+  transition: transform 1s;
+}
