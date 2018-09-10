@@ -580,9 +580,4 @@ $(document).ready(function(){
     });
   });
 
-
-
-
-
-
 });

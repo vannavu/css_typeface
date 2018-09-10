@@ -630,14 +630,57 @@ body {
 }
 
 .and_serifs_aid {
-  --glyph_width: calc(100% / 16.5);
+  --glyph_width: calc(100% / 17);
   margin-bottom: 3em;
 }
 
 .legibility {
   --glyph_width: calc(100% / 11.5);
+  margin-bottom: 12em;
 }
 
+.hamburger {
+  --glyph_width: calc(100% / 11.5);
+  margin-bottom: 3rem;
+}
+
+.hamburger .htop {
+  border-top-left-radius: var(--hstroke);
+  border-top-right-radius: var(--hstroke);
+}
+
+.hamburger .hbottom {
+  border-bottom-left-radius: var(--hstroke);
+  border-bottom-right-radius: var(--hstroke);
+}
+
+.cake {
+  --glyph_width: calc(100% / 4.5);
+  margin-bottom: 3rem;
+}
+
+.sausage {
+  --glyph_width: calc(100% / 7.9);
+  margin-bottom: 3rem;
+}
+
+.sausage .htop, .sausage .hbottom, .sausage .hmiddle {
+  border-radius: calc(var(--hstroke) / 2);
+}
+
+.magnet {
+  --glyph_width: calc(100% / 7.2);
+  margin-bottom: 3rem;
+}
+
+.counter {
+  --glyph_width: calc(100% / 7.9);
+  margin-bottom: 3rem;
+}
+
+.thin {
+  --glyph_width: calc(100% / 4.5);
+}
 /*
 @media only screen and (max-width: 1350px) {
   .wrapper {
