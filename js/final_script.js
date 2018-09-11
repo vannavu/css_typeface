@@ -35,7 +35,7 @@ $(document).ready(function(){
     });
   });
 
-  $(".magnet").click(function() {
+  $(".link").click(function() {
     $(".glyph").css({
       margin: '-0.2rem',
       marginTop: '0.2rem',

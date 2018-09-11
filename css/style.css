@@ -19,13 +19,18 @@ body {
   margin: 5em;
 }
 
+.word {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
 .glyph {
   position: relative;
   display: inline-block;
   width: calc(var(--glyph_width));
   height: calc(var(--glyph_height));
-  margin: calc(0.2rem);
-  margin-bottom: calc(1rem);
+  margin: 0 0.2rem;
 }
 
 .htop, .hmiddle, .hbottom, .vleft, .vmiddle, .vright, .left, .right, .top, .bottom {
@@ -626,12 +631,10 @@ body {
 
 .horizontality {
   --glyph_width: calc(100% / 16);
-  margin-bottom: 3em;
 }
 
 .and_serifs_aid {
   --glyph_width: calc(100% / 17);
-  margin-bottom: 3em;
 }
 
 .legibility {
@@ -641,7 +644,6 @@ body {
 
 .hamburger {
   --glyph_width: calc(100% / 11.5);
-  margin-bottom: 3rem;
 }
 
 .hamburger .htop {
@@ -656,30 +658,39 @@ body {
 
 .cake {
   --glyph_width: calc(100% / 4.5);
-  margin-bottom: 3rem;
 }
 
 .sausage {
   --glyph_width: calc(100% / 7.9);
-  margin-bottom: 3rem;
 }
 
 .sausage .htop, .sausage .hbottom, .sausage .hmiddle {
   border-radius: calc(var(--hstroke) / 2);
 }
 
+
+.link .glyph {
+  --glyph_width: calc(100% / 4.6);
+  margin: 0 0.2rem;
+  transition: margin 1s, width 1s;
+}
+
+.link:hover .glyph {
+  --glyph_width: calc(100% / 4.4);
+  margin: 0 -.19rem;
+  transition: margin 0.5s, width 0.5s;
+}
+
 .magnet {
   --glyph_width: calc(100% / 7.2);
-  margin-bottom: 3rem;
 }
 
 .counter {
-  --glyph_width: calc(100% / 7.9);
-  margin-bottom: 3rem;
+  --glyph_width: calc(100% / 8);
 }
 
 .thin {
-  --glyph_width: calc(100% / 4.5);
+  --glyph_width: calc(100% / 4.55);
 }
 /*
 @media only screen and (max-width: 1350px) {
