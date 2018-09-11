@@ -12,6 +12,8 @@ body {
   --hstroke: calc(var(--glyph_height) * 0.285);
   --vstroke: 1px;
   --stroke_color: black;
+  --num_char: 0;
+  --side_bearings: 0.2rem;
 }
 
 .wrapper {
@@ -22,7 +24,7 @@ body {
 .word {
   width: 100%;
   margin: auto;
-  margin-bottom: 3rem;
+  margin: 3rem 0;
 }
 
 .glyph {
@@ -30,7 +32,7 @@ body {
   display: inline-block;
   width: calc(var(--glyph_width));
   height: calc(var(--glyph_height));
-  margin: 0 0.2rem;
+  margin: 0 var(--side_bearings);
 }
 
 .htop, .hmiddle, .hbottom, .vleft, .vmiddle, .vright, .left, .right, .top, .bottom {
@@ -629,6 +631,8 @@ body {
   right: 0;
 }
 
+/* words */
+
 .horizontality {
   --glyph_width: calc(100% / 16);
 }
@@ -670,7 +674,8 @@ body {
 
 
 .link .glyph {
-  --glyph_width: calc(100% / 4.6);
+  --num_char: 4;
+  --glyph_width: calc((100% / var(--num_char)) - (var(--num_char) * var(--side_bearings)));;
   margin: 0 0.2rem;
   transition: margin 1s, width 1s;
 }
@@ -683,16 +688,39 @@ body {
 
 .magnet {
   --glyph_width: calc(100% / 7.2);
+  margin: 1.5rem 0;
+  transition: margin 1.5s ease-out;
 }
 
-.counter {
+.magnet:hover {
+  margin: -3.19rem 0;
+  transition: margin 0.65s ease-in;
+}
+
+.counter .glyph {
   --glyph_width: calc(100% / 8);
+  background-color: black;
+  transition: background-color 0.5s ease-in;
 }
 
-.thin {
-  --glyph_width: calc(100% / 4.55);
+.counter:hover .glyph {
+  background-color: white;
+  transition: background-color 0.75s ease-out;
 }
-/*
+
+.counter .htop, .counter .hmiddle, .counter .hbottom,
+.counter .vleft, .counter .vmiddle, .counter .vright {
+  --stroke_color: white;
+  transition: background-color 2.75s ease-out;
+}
+
+.counter:hover .htop, .counter:hover .hmiddle, .counter:hover .hbottom,
+.counter:hover .vleft, .counter:hover .vmiddle, .counter:hover .vright {
+  --stroke_color: black;
+  transition: background-color 0.25s;
+}
+
+/* breakpoint trials
 @media only screen and (max-width: 1350px) {
   .wrapper {
     transform: rotate(90deg);

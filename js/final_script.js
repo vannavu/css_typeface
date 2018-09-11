@@ -6,7 +6,7 @@ $(document).ready(function(){
       'border-top-right-radius': '4rem',
       'border-bottom-left-radius': '0',
       'border-bottom-right-radius': '0',
-      'transition': 'border-radius 5s'
+      'transition': 'border-radius 6s'
     });
     $(".hmiddle").css({
       'border-radius': '0',
@@ -17,29 +17,35 @@ $(document).ready(function(){
       'border-top-right-radius': '0',
       'border-bottom-left-radius': '4rem',
       'border-bottom-right-radius': '4rem',
-      'transition': 'border-radius 3s'
+      'transition': 'border-radius 2s'
     });
   });
 
   $(".cake").click(function() {
     $(".htop, .hmiddle, .hbottom").css({
       'border-radius': '0',
-      'transition': 'border-radius 3s'
+      'transition': 'border-radius 2s'
     });
   });
 
   $(".sausage").click(function() {
     $(".htop, .hmiddle, .hbottom").css({
       'border-radius': '4rem',
-      'transition': 'border-radius 3s'
+      'transition': 'border-radius 1.5s'
     });
   });
 
   $(".link").click(function() {
     $(".glyph").css({
-      margin: '-0.2rem',
-      marginTop: '0.2rem',
-      'transition': 'margin 2s'
+      margin: '0 -.19rem',
+      'transition': 'margin 0.5s, width 0.5s',
+    });
+  });
+
+  $(".magnet").click(function() {
+    $(".word").css({
+      margin: '-.19rem 0',
+      'transition': 'margin 0.65s ease-in',
     });
   });
 
@@ -50,19 +56,6 @@ $(document).ready(function(){
     });
     $(".htop, .hmiddle, .hbottom, .vleft, .vright, .vmiddle" ).animate({
       backgroundColor: 'white',
-    }, 1000, function() {
-    });
-  });
-
-  $(".thin").click(function() {
-    $(".hmiddle").css({
-      'top': '50%',
-    });
-    $(".vleft.top, .vleft.bottom, .vright.top, .vright.bottom").css({
-      height: '40%',
-    });
-    $(" .htop, .hmiddle, .hbottom").animate({
-      height: '1px',
     }, 1000, function() {
     });
   });
