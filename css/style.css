@@ -1,9 +1,12 @@
 html {
   font-size: 10px;
+  box-sizing: border-box;
 }
 
 body {
+  width: 100%;
   background: white;
+  margin: 0;
 }
 
 :root {
@@ -13,26 +16,28 @@ body {
   --vstroke: 1px;
   --stroke_color: black;
   --num_char: 0;
-  --side_bearings: 0.2rem;
+  --side_bearings: 0.4rem;
+  --word_width: 100%;
 }
 
 .wrapper {
-  width: auto;
-  margin: 5em;
-  white-space: nowrap;
+  width: 85%;
+  margin: 5rem auto;
 }
 
 .word {
-  width: 100%;
-  margin: auto;
+  position: relative;
+  display: block;
+  width: auto;
   margin: 3rem 0;
+  font-size: 0;
 }
 
 .glyph {
   position: relative;
   display: inline-block;
-  width: calc(var(--glyph_width));
-  height: calc(var(--glyph_height));
+  width: var(--glyph_width);
+  height: var(--glyph_height);
   margin: 0 var(--side_bearings);
 }
 
@@ -634,21 +639,25 @@ body {
 
 /* words */
 
-.horizontality {
-  --glyph_width: calc(100% / 16);
+.horizontality .glyph {
+  --num_char: 13.605;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
 }
 
 .and_serifs_aid {
-  --glyph_width: calc(100% / 17);
+  --num_char: 14.08;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
 }
 
 .legibility {
-  --glyph_width: calc(100% / 11.5);
-  margin-bottom: 12em;
+  --num_char: 10.15;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+  margin-bottom: 12rem;
 }
 
 .hamburger {
-  --glyph_width: calc(100% / 11.5);
+  --num_char: 10.31;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
 }
 
 .hamburger .htop {
@@ -662,44 +671,49 @@ body {
 }
 
 .cake {
-  --glyph_width: calc(100% / 4.5);
+  --num_char: 4.3;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
 }
 
 .sausage {
-  --glyph_width: calc(100% / 7.9);
+  --num_char: 7.3;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
 }
 
 .sausage .htop, .sausage .hbottom, .sausage .hmiddle {
   border-radius: calc(var(--hstroke) / 2);
 }
 
-
 .link .glyph {
-  --num_char: 4;
-  --glyph_width: calc((100% / var(--num_char)) - (var(--num_char) * var(--side_bearings)));;
-  margin: 0 0.2rem;
+  --num_char: 4.4;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+  --side_bearings: 0.4rem;
+  margin: 0 var(--side_bearings);
   transition: margin 1s, width 1s;
 }
 
 .link:hover .glyph {
-  --glyph_width: calc(100% / 4.4);
-  margin: 0 -.19rem;
+  --side_bearings: 0rem;
+  margin: 0 calc(var(--side_bearings) - 0.5px);
   transition: margin 0.5s, width 0.5s;
 }
 
 .magnet {
-  --glyph_width: calc(100% / 7.2);
-  margin: 1.5rem 0;
+  --num_char: 6.7;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+  margin: 3em 0;
   transition: margin 1.5s ease-out;
 }
 
 .magnet:hover {
-  margin: -3.19rem 0;
+  margin: -3rem 0;
   transition: margin 0.65s ease-in;
 }
 
 .counter .glyph {
-  --glyph_width: calc(100% / 8);
+  --num_char: 7.33;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
   background-color: black;
   transition: background-color 0.5s ease-in;
 }

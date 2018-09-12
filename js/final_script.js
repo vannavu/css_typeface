@@ -37,14 +37,14 @@ $(document).ready(function(){
 
   $(".link").click(function() {
     $(".glyph").css({
-      margin: '0 -.19rem',
+      margin: '0 -0.5px',
       'transition': 'margin 0.5s, width 0.5s',
     });
   });
 
   $(".magnet").click(function() {
     $(".word").css({
-      margin: '-.19rem 0',
+      margin: '0',
       'transition': 'margin 0.65s ease-in',
     });
   });
