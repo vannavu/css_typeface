@@ -59,7 +59,6 @@ $(document).ready(function(){
 
   $(".link").click(function() {
     $(".glyph").css({
-      var 
       margin: '0 -0.5px',
       'transition': 'margin 0.5s, width 0.5s',
     });
