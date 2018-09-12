@@ -1,5 +1,27 @@
 $(document).ready(function(){
 
+  $(".button").hover(function() {
+      $(this).css({
+        'transform': 'scale(1.1)',
+        'transition': 'transform 0.6s, margin 0.6s ease-in'
+      });
+    }, function() {
+        $(this).css({
+          'transform': 'scale(1)',
+          'transition': 'transform 1s, margin 1s ease-in'
+        });
+    });
+
+  $(".button").click(function() {
+    $(this).unbind("mousenter mouseleave");
+    if($(this).hasClass('clicked')) {
+      $(this).removeClass('clicked');
+    }
+    else {
+      $(this).addClass('clicked');
+    }
+  });
+
   $(".hamburger").click(function() {
     $(".htop").css({
       'border-top-left-radius': '4rem',
@@ -37,6 +59,7 @@ $(document).ready(function(){
 
   $(".link").click(function() {
     $(".glyph").css({
+      var 
       margin: '0 -0.5px',
       'transition': 'margin 0.5s, width 0.5s',
     });
@@ -44,19 +67,22 @@ $(document).ready(function(){
 
   $(".magnet").click(function() {
     $(".word").css({
-      margin: '0',
-      'transition': 'margin 0.65s ease-in',
+        margin: '0.5% 0',
+        'transition': 'margin 0.65s ease-in',
+    });
+    $(this).css({
+      "--stroke_color": 'silver',
     });
   });
 
   $(".counter").click(function() {
     $(".glyph").animate({
       backgroundColor: 'black',
-    }, 1000, function() {
+    }, 500, function() {
     });
     $(".htop, .hmiddle, .hbottom, .vleft, .vright, .vmiddle" ).animate({
       backgroundColor: 'white',
-    }, 1000, function() {
+    }, 2750, function() {
     });
   });
 

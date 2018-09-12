@@ -17,7 +17,7 @@ body {
   --stroke_color: black;
   --num_char: 0;
   --side_bearings: 0.4rem;
-  --word_width: 100%;
+  --justified: calc(100% / var(--num_char) - 2 * var(--side_bearings));
 }
 
 .wrapper {
@@ -639,6 +639,10 @@ body {
 
 /* words */
 
+.clicked {
+  transform: scale(1.1);
+}
+
 .horizontality .glyph {
   --num_char: 13.605;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
@@ -655,20 +659,22 @@ body {
   margin-bottom: 12rem;
 }
 
-.hamburger {
+.hamburger .glyph{
   --num_char: 10.31;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
 }
 
-.hamburger .htop {
+/*
+.hamburger #h.glyph .htop {
   border-top-left-radius: var(--hstroke);
   border-top-right-radius: var(--hstroke);
 }
 
-.hamburger .hbottom {
+.hamburger #h.glyph .hbottom {
   border-bottom-left-radius: var(--hstroke);
   border-bottom-right-radius: var(--hstroke);
 }
+*/
 
 .cake {
   --num_char: 4.3;
@@ -695,7 +701,7 @@ body {
 
 .link:hover .glyph {
   --side_bearings: 0rem;
-  margin: 0 calc(var(--side_bearings) - 0.5px);
+  margin: 0 calc(var(--vstroke) / -2);
   transition: margin 0.5s, width 0.5s;
 }
 
@@ -708,7 +714,7 @@ body {
 
 .magnet:hover {
   margin: -3rem 0;
-  transition: margin 0.65s ease-in;
+  transition: margin 1s 0.65s ease-in;
 }
 
 .counter .glyph {
