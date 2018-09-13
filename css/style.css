@@ -17,12 +17,18 @@ body {
   --stroke_color: black;
   --num_char: 0;
   --side_bearings: 0.4rem;
-  --justified: calc(100% / var(--num_char) - 2 * var(--side_bearings));
 }
 
 .wrapper {
+  position: relative;
   width: 85%;
-  margin: 5rem auto;
+  margin: auto;
+  top: 44%;
+  transform: translateY(-50%);
+}
+
+section {
+  height: 100vh;
 }
 
 .word {
@@ -168,7 +174,7 @@ body {
   left: 20%;
 }
 
-#g.glyph {
+#g.glyph, #o_umlaut.glyph {
   width: calc(var(--glyph_width) * 0.95);
 }
 
@@ -318,6 +324,10 @@ body {
 
 #n .vright {
   right: 18%;
+}
+
+#o_umlaut .htop.left, .htop.right {
+  width: 47.5%;
 }
 
 #p .hmiddle {
@@ -536,7 +546,10 @@ body {
 
 #z .hmiddle.dot {
   width: 20%;
-  left: 40%;
+  min-width: var(--hstroke);
+  left: 0;
+  right: 0;
+  margin: auto;
   top: calc(var(--glyph_height) * .3575);
   height: var(--hstroke);
 }
@@ -551,7 +564,10 @@ body {
 
 #zero .hmiddle {
   width: 21%;
-  left: 39.5%;
+  min-width: var(--hstroke);
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 #one.glyph {
@@ -643,8 +659,15 @@ body {
   transform: scale(1.1);
 }
 
-.horizontality .glyph {
-  --num_char: 13.605;
+/* legibility */
+
+.horizontal {
+  --num_char: 10.455;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.emphasis {
+  --num_char: 8.65;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
 }
 
@@ -658,6 +681,84 @@ body {
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
   margin-bottom: 12rem;
 }
+
+/* contrasting */
+
+.contrasting {
+  --num_char: 11.305;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.with {
+  --num_char: 4.55;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.convention {
+  --num_char: 10.35;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.nina_stossinger {
+  --num_char: 15.205;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+/* law */
+
+.i_follow_the {
+  --num_char: 11.875;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.spirit {
+  --num_char: 6.105;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.of_the_law {
+  --num_char: 10.1;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.not_the {
+  --num_char: 7.1;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.letter {
+  --num_char: 6.18;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+/* truth */
+
+.do_you_want {
+  --num_char: 11.35;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.typo {
+  --num_char: 4.1;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.graphy {
+  --num_char: 6.68;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.or_do_you_want_the {
+  --num_char: 18.13;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.truth {
+  --num_char: 5.58;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+/* fonts */
 
 .hamburger .glyph{
   --num_char: 10.31;
