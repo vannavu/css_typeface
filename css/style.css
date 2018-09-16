@@ -669,8 +669,8 @@ section {
 /* transformation icons */
 
 .transformation_icons {
-  --stroke_color: silver;
-  --num_char: 11.85;
+  --stroke_color: var(--button_off);
+  --num_char: 11.5;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings) - 1px);
   transform: scale(0.75);
   position: relative;
@@ -678,10 +678,6 @@ section {
   width: auto;
   margin: 6rem 0 0 0;
   font-size: 0;
-}
-
-#hamburger, #sausage, #link, #magnet, #i.button, #b.button {
-  opacity: 0;
 }
 
 #hamburger, #sausage, #link, #magnet, #i.button, #b.button {
@@ -761,17 +757,10 @@ section {
 }
 
 #i.button {
-  background-color: white;
-  --stroke_color: darkgray;
-  transition: background-color 1s;
-  border: 1px solid white;
-}
-
-#i.button:hover {
-  background-color: darkgray;
+  background-color: var(--button_off);
   --stroke_color: white;
   transition: background-color 1s;
-  border: 1px solid darkgray;
+  border: 1px solid var(--button_off);
 }
 
 /* legibility */
@@ -852,6 +841,32 @@ section {
 
 .letter {
   --num_char: 6.18;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+/* rational */
+.rational {
+  --num_char: 8.53;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.justified {
+  --num_char: 9.275;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.but_still {
+  --num_char: 8.725;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.super {
+  --num_char: 5.305;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.dumb {
+  --num_char: 4.65;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
 }
 
