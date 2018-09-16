@@ -20,11 +20,13 @@ body {
   --stroke_color: black;
   --num_char: 0;
   --side_bearings: 0.4rem;
+  --button_on: blue;
+  --button_off: darkgray;
 }
 
 .wrapper {
   position: relative;
-  width: 85%;
+  width: 75%;
   margin: auto;
   top: 44%;
   transform: translateY(-50%);
@@ -40,6 +42,7 @@ section {
   width: auto;
   margin: 3rem 0;
   font-size: 0;
+  white-space: nowrap;
 }
 
 .glyph {
@@ -729,6 +732,9 @@ section {
   transition: bottom 0.5s;
 }
 
+#b.button {
+  display: inline-block;
+}
 
 #b.button .htop, #b.button .hmiddle, #b.button .hbottom, #b.button .vleft, #b.button .vright {
   transition: background-color 1s;
@@ -736,6 +742,20 @@ section {
 
 #b.button:hover, #b.button:hover .htop, #b.button:hover .hmiddle, #b.button:hover .hbottom, #b.button:hover .vleft, #b.button:hover .vright {
   --stroke_color: black;
+  opacity: 1;
+  transition: background-color 1s, opacity 1s;
+}
+
+#w.button {
+  display: none;
+}
+
+#w.button .htop, #w.button .hmiddle, #w.button .hbottom, #w.button .vleft, #w.button .vmiddle, #w.button .vright {
+  transition: background-color 1s;
+}
+
+#w.button:hover, #w.button:hover .htop, #w.button:hover .hmiddle, #w.button:hover .hbottom, #w.button:hover .vleft, #w.button:hover .vmiddle, #w.button:hover .vright {
+  --stroke_color: white;
   opacity: 1;
   transition: background-color 1s, opacity 1s;
 }
@@ -754,18 +774,10 @@ section {
   border: 1px solid darkgray;
 }
 
-.transformation_icons #b {
-
-}
-
-#w.button {
-  display: none;
-}
-
 /* legibility */
 
 .horizontal {
-  --num_char: 10.455;
+  --num_char: 10.405;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
 }
 
@@ -785,7 +797,7 @@ section {
 }
 
 .and_serifs_aid {
-  --num_char: 13.78;
+  --num_char: 13.68;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
 }
 
