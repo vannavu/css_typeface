@@ -150,13 +150,8 @@ $(document).ready(function(){
       $(".word .glyph").css({
         '--side_bearings': '0rem',
         '--glyph_width': 'calc(100% / var(--num_char) - 2 * var(--side_bearings))',
-        width: 'var(--glyph_width)',
         margin: '0 -0.25px',
         'transition': 'margin 0.25s ease-in, width 0.25s ease-in',
-      });
-      $(".wrapper").css({
-        width: '95%',
-        'transition': 'width 1s'
       });
     }
     else {
@@ -169,10 +164,6 @@ $(document).ready(function(){
         '--glyph_width': 'calc(100% / var(--num_char) - 2 * var(--side_bearings))',
         margin: '0 var(--side_bearings)',
         'transition': 'margin 0.25s ease-in, width 0.25s ease-in',
-      });
-      $(".wrapper").css({
-        width: '75%',
-        'transition': 'width 1s'
       });
     }
   });
