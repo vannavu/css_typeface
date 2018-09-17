@@ -21,11 +21,11 @@ $(document).ready(function(){
     var random_shift = random_width * direction;
     $(this).animate({
       width: random_width,
-    }, 1000, function(){
+    }, random_width * 6, function(){
     });
-    $(this).parent().delay(900).animate({
+    $(this).parent().delay(random_width * 5.75).animate({
       left: random_shift,
-    }, 1500, function() {
+    }, random_width * 8, function() {
     });
     if (direction == -1) {
       direction = 1;
