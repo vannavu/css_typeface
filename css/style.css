@@ -275,7 +275,7 @@ section {
 }
 
 #l .vright.bottom {
-  height: calc(var(--hstroke) * 1.75)
+  height: calc(var(--hstroke) * 1.75);
 }
 
 #m.glyph {
@@ -390,6 +390,15 @@ section {
 
 #s.glyph, #z.glyph, #two.glyph, #five.glyph {
   width: calc(var(--glyph_width) * 0.925);
+}
+
+#s .hmiddle, #e .hmiddle {
+  height: 1px;
+  top: 50%;
+}
+
+#s .vleft.top, .vright.bottom {
+  height: 50%;
 }
 
 #t .hbottom {
@@ -872,8 +881,13 @@ section {
 
 /* truth */
 
+section#truth .word .glyph {
+  --stroke_color: white;
+  opacity: 0.95;
+}
+
 .do_you_want {
-  --num_char: 11.35;
+  --num_char: 11.05;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
 }
 
@@ -888,7 +902,7 @@ section {
 }
 
 .or_do_you_want_the {
-  --num_char: 18.13;
+  --num_char: 17.63;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
 }
 
@@ -899,9 +913,26 @@ section {
 
 /* fonts */
 
-.hamburger .glyph{
+.hamburger .glyph {
   --num_char: 10.31;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.hamburger .glyph .htop {
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.hamburger .glyph .hmiddle {
+  border-radius: 0;
+}
+
+.hamburger .glyph .hbottom {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 4rem;
+  border-bottom-right-radius: 4rem;
 }
 
 /*
@@ -925,9 +956,8 @@ section {
   --num_char: 7.3;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
 }
-}
 
-.sausage .htop, .sausage .hbottom, .sausage .hmiddle {
+.sausage .glyph .htop, .sausage .glyph .hbottom, .sausage .glyph .hmiddle {
   border-radius: calc(var(--hstroke) / 2);
 }
 
@@ -948,13 +978,13 @@ section {
 .magnet {
   --num_char: 6.7;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
-  margin: 3em 0;
+  margin: 2.2rem 0;
   transition: margin 1.5s ease-out;
 }
 
 .magnet:hover {
-  margin: -3rem 0;
-  transition: margin 1s 0.65s ease-in;
+  margin: -2.2rem 0;
+  transition: margin 1s 1s ease-in;
 }
 
 .counter .glyph {

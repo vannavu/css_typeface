@@ -1,20 +1,6 @@
 /* rational */
 $(document).ready(function(){
 
-  $(".word .glyph").mouseover(function() {
-    $(this).css({
-      'transform': 'scale(.9)',
-      'transition': 'transform 0.6s'
-    });
-  });
-
-  $(".word .glyph").mouseleave(function() {
-    $(this).css({
-      'transform': 'scale(1)',
-      'transition': 'transform 1s'
-    });
-  });
-
   var direction = -1;
   $(".word .glyph").click(function() {
     var random_width = Math.floor($(".wrapper").width() * Math.random() * 0.5) + 0.1;
