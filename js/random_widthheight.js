@@ -6,14 +6,14 @@ $(document).ready(function(){
     if (characters_shown == false) {
       characters_shown = true;
       $(this).css({
-        'left': '0%',
+        'left': 'calc(-100% + 3rem)',
         'transition': 'left 2s',
       });
     }
     else {
       characters_shown = false;
       $(this).css({
-        'left': 'calc(-100% + 3rem)',
+        'left': '0%',
         'transition': 'left 2s',
       });
     }
@@ -28,11 +28,6 @@ $(document).ready(function(){
       $(this).animate({
         width: random_width,
       }, random_width * 8, function(){
-      });
-      $("#main").animate({
-        'margin-left': '3rem',
-        'margin-right': '3rem',
-      }, 1000, function(){
       });
     }
     else {
@@ -63,14 +58,6 @@ $(document).ready(function(){
         });
       }
       $(this).find(".vleft, .vmiddle, .vright").css('transition', 'height 3s');
-      $("#main").animate({
-        'margin-top': '3rem',
-      }, 1000, function(){
-      });
-      $(".word").animate({
-        margin: '0.8rem 0',
-      }, random_width * 10, function() {
-      });
     }
   });
 
