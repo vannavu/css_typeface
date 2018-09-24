@@ -1,25 +1,41 @@
 /* rational */
 $(document).ready(function(){
 
-  var shift = -1;
+  var characters_shown = false;
+  $("section#character_set").click(function() {
+    if (characters_shown == false) {
+      characters_shown = true;
+      $(this).css({
+        'left': '0%',
+        'transition': 'left 2s',
+      });
+    }
+    else {
+      characters_shown = false;
+      $(this).css({
+        'left': 'calc(-100% + 3rem)',
+        'transition': 'left 2s',
+      });
+    }
+  });
+
   var direction = 0;
-  $(".word .glyph").click(function() {
+  $("#text .word .glyph").click(function() {
     var random_width = Math.floor($(".wrapper").width() * Math.random() * 0.5) + 20;
     var random_height = Math.floor($(".wrapper").height() * Math.random() * 0.3) + 62;
     if (direction == 0) {
-      var random_shift = random_width * shift;
       direction = 1;
       $(this).animate({
         width: random_width,
       }, random_width * 8, function(){
       });
-      $(this).parent().delay(random_width * 2).animate({
-        left: random_shift,
-      }, random_width * 10, function() {
+      $("#main").animate({
+        'margin-left': '3rem',
+        'margin-right': '3rem',
+      }, 1000, function(){
       });
     }
     else {
-      var random_shift = random_height * shift;
       direction = 0;
       $(this).animate({
         height: random_height,
@@ -47,7 +63,7 @@ $(document).ready(function(){
         });
       }
       $(this).find(".vleft, .vmiddle, .vright").css('transition', 'height 3s');
-      $(".wrapper").animate({
+      $("#main").animate({
         'margin-top': '3rem',
       }, 1000, function(){
       });
@@ -55,12 +71,6 @@ $(document).ready(function(){
         margin: '0.8rem 0',
       }, random_width * 10, function() {
       });
-    }
-    if (shift == -1) {
-      shift = 1;
-    }
-    else {
-      shift = -1;
     }
   });
 

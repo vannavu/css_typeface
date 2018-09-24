@@ -8,8 +8,12 @@ html {
 
 body {
   width: 100%;
-  background: white;
+  /*background: white;*/
   margin: 0;
+  background-image: url("../r_place_blue.gif");
+  background-color: black;
+  background-size: 100%;
+  z-index: 1;
 }
 
 :root {
@@ -17,7 +21,7 @@ body {
   --glyph_height: calc(var(--glyph_width) * 7 / 14.5);
   --hstroke: calc(var(--glyph_height) * 0.285);
   --vstroke: 1px;
-  --stroke_color: black;
+  --stroke_color: white;
   --num_char: 0;
   --side_bearings: 0.4rem;
   --button_on: blue;
@@ -28,11 +32,39 @@ body {
 .wrapper {
   position: relative;
   width: 75%;
-  margin: 12rem auto;
+  margin: 6rem auto;
 }
 
-section {
+#main {
+  margin: 12% auto;
+}
+
+section#character_set {
+  --stroke_color: black;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: calc(-100% + 3rem);
+  width: 100%;
+  border-right: 3rem solid black;
+  background-color: rgba(255,255,255,0.9);
   height: 100vh;
+}
+
+section#text {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: auto;
+  padding-left: 3rem;
+  mix-blend-mode: multiply;
+  --stroke_color: silver;
+  opacity: 0.8;
+}
+
+#character_set .glyph {
+  margin-bottom: 2rem;
+  opacity: 1;
 }
 
 .word {
@@ -864,6 +896,7 @@ section {
 }
 
 /* rational */
+
 .rational {
   --num_char: 8.53;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
@@ -1048,4 +1081,32 @@ section#truth .word .glyph {
   .glyph {
     margin: 0.2rem;
   }
+}
+
+*/
+
+.rectangle {
+  --num_char: 9.33;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+/* text_based_communities */
+.expansion_of {
+  --num_char: 11.875;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.text {
+  --num_char: 4.15;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.based {
+  --num_char: 5.075;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.communities {
+  --num_char: 11.825;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-  <title>horizontality and serifs aid legibility</title>
+  <title>RECTANGLE</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -9,68 +9,16 @@
   crossorigin="anonymous"></script>
   <script src="js/jquery-color.js"></script>
   <script src="js/final_script.js"></script>
+  <script src="js/random_widthheight.js"></script>
 </head>
 
 <body>
-  <section id="fonts">
-    <div class="wrapper">
-      <div class="word button hamburger">
-        <div class="glyph" id="h">
-          <div class="htop left"></div>
-          <div class="htop right"></div>
-          <div class="hmiddle"></div>
-          <div class="hbottom left"></div>
-          <div class="hbottom right"></div>
-          <div class="vleft"></div>
-          <div class="vright"></div>
-        </div>
-        <div class="glyph" id="a">
-          <div class="htop"></div>
-          <div class="hmiddle"></div>
-          <div class="hbottom left"></div>
-          <div class="hbottom right"></div>
-          <div class="vleft"></div>
-          <div class="vright"></div>
-        </div>
-        <div class="glyph" id="m">
-          <div class="htop"></div>
-          <div class="hbottom left"></div>
-          <div class="hbottom middle"></div>
-          <div class="hbottom right"></div>
-          <div class="vleft"></div>
-          <div class="vmiddle"></div>
-          <div class="vright"></div>
-        </div>
-        <div class="glyph" id="b">
-          <div class="htop"></div>
-          <div class="hmiddle"></div>
-          <div class="hbottom"></div>
-          <div class="vleft"></div>
-          <div class="vright"></div>
-        </div>
-        <div class="glyph" id="u">
-          <div class="htop left"></div>
-          <div class="htop right"></div>
-          <div class="hbottom"></div>
-          <div class="vleft"></div>
-          <div class="vright"></div>
-        </div>
-        <div class="glyph" id="r">
-          <div class="htop"></div>
-          <div class="hmiddle"></div>
-          <div class="hbottom left"></div>
-          <div class="hbottom right"></div>
-          <div class="vleft"></div>
-          <div class="vright top"></div>
-          <div class="vright bottom"></div>
-        </div>
-        <div class="glyph" id="g">
-          <div class="htop"></div>
-          <div class="hmiddle"></div>
-          <div class="hbottom"></div>
-          <div class="vleft"></div>
-          <div class="vright bottom"></div>
-        </div>
+
+  <section id="text">
+
+    <div class="wrapper" id="main">
+
+      <div class="word expansion_of">
         <div class="glyph" id="e">
           <div class="htop"></div>
           <div class="hmiddle"></div>
@@ -79,63 +27,24 @@
           <div class="vright top"></div>
           <div class="vright bottom"></div>
         </div>
-        <div class="glyph" id="r">
-          <div class="htop"></div>
-          <div class="hmiddle"></div>
-          <div class="hbottom left"></div>
-          <div class="hbottom right"></div>
-          <div class="vleft"></div>
-          <div class="vright top"></div>
-          <div class="vright bottom"></div>
-        </div>
-      </div>
-
-      <div class="word button cake">
-        <div class="glyph" id="c">
-          <div class="htop"></div>
-          <div class="hbottom"></div>
-          <div class="vleft"></div>
-          <div class="vright top"></div>
-          <div class="vright bottom"></div>
-        </div>
-        <div class="glyph" id="a">
-          <div class="htop"></div>
-          <div class="hmiddle"></div>
-          <div class="hbottom left"></div>
-          <div class="hbottom right"></div>
-          <div class="vleft"></div>
-          <div class="vright"></div>
-        </div>
-        <div class="glyph" id="k">
+        <div class="glyph" id="x">
           <div class="htop left"></div>
           <div class="htop right"></div>
           <div class="hmiddle"></div>
           <div class="hbottom left"></div>
           <div class="hbottom right"></div>
-          <div class="vleft"></div>
-          <div class="vright top"></div>
-          <div class="vright bottom"></div>
-        </div>
-        <div class="glyph" id="e">
-          <div class="htop"></div>
-          <div class="hmiddle"></div>
-          <div class="hbottom"></div>
-          <div class="vleft"></div>
-          <div class="vright top"></div>
-          <div class="vright bottom"></div>
-        </div>
-      </div>
-
-      <div class="word button sausage">
-        <div class="glyph" id="s">
-          <div class="htop"></div>
-          <div class="hmiddle"></div>
-          <div class="hbottom"></div>
           <div class="vleft top"></div>
           <div class="vleft bottom"></div>
           <div class="vright top"></div>
           <div class="vright bottom"></div>
         </div>
+        <div class="glyph" id="p">
+          <div class="htop"></div>
+          <div class="hmiddle"></div>
+          <div class="hbottom"></div>
+          <div class="vleft"></div>
+          <div class="vright top"></div>
+        </div>
         <div class="glyph" id="a">
           <div class="htop"></div>
           <div class="hmiddle"></div>
@@ -144,10 +53,10 @@
           <div class="vleft"></div>
           <div class="vright"></div>
         </div>
-        <div class="glyph" id="u">
-          <div class="htop left"></div>
-          <div class="htop right"></div>
-          <div class="hbottom"></div>
+        <div class="glyph" id="n">
+          <div class="htop"></div>
+          <div class="hbottom left"></div>
+          <div class="hbottom right"></div>
           <div class="vleft"></div>
           <div class="vright"></div>
         </div>
@@ -158,38 +67,6 @@
           <div class="vleft top"></div>
           <div class="vleft bottom"></div>
           <div class="vright top"></div>
-          <div class="vright bottom"></div>
-        </div>
-        <div class="glyph" id="a">
-          <div class="htop"></div>
-          <div class="hmiddle"></div>
-          <div class="hbottom left"></div>
-          <div class="hbottom right"></div>
-          <div class="vleft"></div>
-          <div class="vright"></div>
-        </div>
-        <div class="glyph" id="g">
-          <div class="htop"></div>
-          <div class="hmiddle"></div>
-          <div class="hbottom"></div>
-          <div class="vleft"></div>
-          <div class="vright bottom"></div>
-        </div>
-        <div class="glyph" id="e">
-          <div class="htop"></div>
-          <div class="hmiddle"></div>
-          <div class="hbottom"></div>
-          <div class="vleft"></div>
-          <div class="vright top"></div>
-          <div class="vright bottom"></div>
-        </div>
-      </div>
-
-      <div class="word button link">
-        <div class="glyph" id="l">
-          <div class="htop"></div>
-          <div class="hbottom"></div>
-          <div class="vleft"></div>
           <div class="vright bottom"></div>
         </div>
         <div class="glyph" id="i">
@@ -197,6 +74,12 @@
           <div class="hbottom"></div>
           <div class="vleft"></div>
         </div>
+        <div class="glyph" id="o">
+          <div class="htop"></div>
+          <div class="hbottom"></div>
+          <div class="vleft"></div>
+          <div class="vright"></div>
+        </div>
         <div class="glyph" id="n">
           <div class="htop"></div>
           <div class="hbottom left"></div>
@@ -204,55 +87,47 @@
           <div class="vleft"></div>
           <div class="vright"></div>
         </div>
-        <div class="glyph" id="k">
-          <div class="htop left"></div>
-          <div class="htop right"></div>
-          <div class="hmiddle"></div>
-          <div class="hbottom left"></div>
-          <div class="hbottom right"></div>
-          <div class="vleft"></div>
-          <div class="vright top"></div>
-          <div class="vright bottom"></div>
+        <div class="glyph" id="space">
         </div>
-      </div>
-
-      <div class="word button magnet">
-        <div class="glyph" id="m">
+        <div class="glyph" id="o">
           <div class="htop"></div>
-          <div class="hbottom left"></div>
-          <div class="hbottom middle"></div>
-          <div class="hbottom right"></div>
-          <div class="vleft"></div>
-          <div class="vmiddle"></div>
-          <div class="vright"></div>
-        </div>
-        <div class="glyph" id="a">
-          <div class="htop"></div>
-          <div class="hmiddle"></div>
-          <div class="hbottom left"></div>
-          <div class="hbottom right"></div>
+          <div class="hbottom"></div>
           <div class="vleft"></div>
           <div class="vright"></div>
         </div>
-        <div class="glyph" id="g">
+        <div class="glyph" id="f">
           <div class="htop"></div>
           <div class="hmiddle"></div>
           <div class="hbottom"></div>
           <div class="vleft"></div>
-          <div class="vright bottom"></div>
+          <div class="vright top"></div>
         </div>
-        <div class="glyph" id="n">
+      </div>
+
+      <div class="word text">
+        <div class="glyph" id="t">
           <div class="htop"></div>
-          <div class="hbottom left"></div>
-          <div class="hbottom right"></div>
+          <div class="hbottom"></div>
+          <div class="vleft top"></div>
           <div class="vleft"></div>
-          <div class="vright"></div>
+          <div class="vright top"></div>
         </div>
         <div class="glyph" id="e">
           <div class="htop"></div>
           <div class="hmiddle"></div>
           <div class="hbottom"></div>
           <div class="vleft"></div>
+          <div class="vright top"></div>
+          <div class="vright bottom"></div>
+        </div>
+        <div class="glyph" id="x">
+          <div class="htop left"></div>
+          <div class="htop right"></div>
+          <div class="hmiddle"></div>
+          <div class="hbottom left"></div>
+          <div class="hbottom right"></div>
+          <div class="vleft top"></div>
+          <div class="vleft bottom"></div>
           <div class="vright top"></div>
           <div class="vright bottom"></div>
         </div>
@@ -265,7 +140,48 @@
         </div>
       </div>
 
-      <div class="word button counter">
+      <div class="word based">
+        <div class="glyph" id="b">
+          <div class="htop"></div>
+          <div class="hmiddle"></div>
+          <div class="hbottom"></div>
+          <div class="vleft"></div>
+          <div class="vright"></div>
+        </div>
+        <div class="glyph" id="a">
+          <div class="htop"></div>
+          <div class="hmiddle"></div>
+          <div class="hbottom left"></div>
+          <div class="hbottom right"></div>
+          <div class="vleft"></div>
+          <div class="vright"></div>
+        </div>
+        <div class="glyph" id="s">
+          <div class="htop"></div>
+          <div class="hmiddle"></div>
+          <div class="hbottom"></div>
+          <div class="vleft top"></div>
+          <div class="vleft bottom"></div>
+          <div class="vright top"></div>
+          <div class="vright bottom"></div>
+        </div>
+        <div class="glyph" id="e">
+          <div class="htop"></div>
+          <div class="hmiddle"></div>
+          <div class="hbottom"></div>
+          <div class="vleft"></div>
+          <div class="vright top"></div>
+          <div class="vright bottom"></div>
+        </div>
+        <div class="glyph" id="d">
+          <div class="htop"></div>
+          <div class="hbottom"></div>
+          <div class="vleft"></div>
+          <div class="vright"></div>
+        </div>
+      </div>
+
+      <div class="word communities">
         <div class="glyph" id="c">
           <div class="htop"></div>
           <div class="hbottom"></div>
@@ -279,6 +195,24 @@
           <div class="vleft"></div>
           <div class="vright"></div>
         </div>
+        <div class="glyph" id="m">
+          <div class="htop"></div>
+          <div class="hbottom left"></div>
+          <div class="hbottom middle"></div>
+          <div class="hbottom right"></div>
+          <div class="vleft"></div>
+          <div class="vmiddle"></div>
+          <div class="vright"></div>
+        </div>
+        <div class="glyph" id="m">
+          <div class="htop"></div>
+          <div class="hbottom left"></div>
+          <div class="hbottom middle"></div>
+          <div class="hbottom right"></div>
+          <div class="vleft"></div>
+          <div class="vmiddle"></div>
+          <div class="vright"></div>
+        </div>
         <div class="glyph" id="u">
           <div class="htop left"></div>
           <div class="htop right"></div>
@@ -293,12 +227,22 @@
           <div class="vleft"></div>
           <div class="vright"></div>
         </div>
+        <div class="glyph" id="i">
+          <div class="htop"></div>
+          <div class="hbottom"></div>
+          <div class="vleft"></div>
+        </div>
         <div class="glyph" id="t">
           <div class="htop"></div>
           <div class="hbottom"></div>
           <div class="vleft top"></div>
           <div class="vleft"></div>
           <div class="vright top"></div>
+        </div>
+        <div class="glyph" id="i">
+          <div class="htop"></div>
+          <div class="hbottom"></div>
+          <div class="vleft"></div>
         </div>
         <div class="glyph" id="e">
           <div class="htop"></div>
@@ -308,18 +252,408 @@
           <div class="vright top"></div>
           <div class="vright bottom"></div>
         </div>
-        <div class="glyph" id="r">
+        <div class="glyph" id="s">
           <div class="htop"></div>
           <div class="hmiddle"></div>
-          <div class="hbottom left"></div>
-          <div class="hbottom right"></div>
-          <div class="vleft"></div>
+          <div class="hbottom"></div>
+          <div class="vleft top"></div>
+          <div class="vleft bottom"></div>
           <div class="vright top"></div>
           <div class="vright bottom"></div>
         </div>
       </div>
+
     </div>
-  </section>
+</section>
+
+<section id="character_set">
+
+  <div class="wrapper">
+
+    <div class="word rectangle">
+      <div class="glyph" id="r">
+        <div class="htop"></div>
+        <div class="hmiddle"></div>
+        <div class="hbottom left"></div>
+        <div class="hbottom right"></div>
+        <div class="vleft"></div>
+        <div class="vright top"></div>
+        <div class="vright bottom"></div>
+      </div>
+      <div class="glyph" id="e">
+        <div class="htop"></div>
+        <div class="hmiddle"></div>
+        <div class="hbottom"></div>
+        <div class="vleft"></div>
+        <div class="vright top"></div>
+        <div class="vright bottom"></div>
+      </div>
+      <div class="glyph" id="c">
+        <div class="htop"></div>
+        <div class="hbottom"></div>
+        <div class="vleft"></div>
+        <div class="vright top"></div>
+        <div class="vright bottom"></div>
+      </div>
+      <div class="glyph" id="t">
+        <div class="htop"></div>
+        <div class="hbottom"></div>
+        <div class="vleft top"></div>
+        <div class="vleft"></div>
+        <div class="vright top"></div>
+      </div>
+      <div class="glyph" id="a">
+        <div class="htop"></div>
+        <div class="hmiddle"></div>
+        <div class="hbottom left"></div>
+        <div class="hbottom right"></div>
+        <div class="vleft"></div>
+        <div class="vright"></div>
+      </div>
+      <div class="glyph" id="n">
+        <div class="htop"></div>
+        <div class="hbottom left"></div>
+        <div class="hbottom right"></div>
+        <div class="vleft"></div>
+        <div class="vright"></div>
+      </div>
+      <div class="glyph" id="g">
+        <div class="htop"></div>
+        <div class="hmiddle"></div>
+        <div class="hbottom"></div>
+        <div class="vleft"></div>
+        <div class="vright bottom"></div>
+      </div>
+      <div class="glyph" id="l">
+        <div class="htop"></div>
+        <div class="hbottom"></div>
+        <div class="vleft"></div>
+        <div class="vright bottom"></div>
+      </div>
+      <div class="glyph" id="e">
+        <div class="htop"></div>
+        <div class="hmiddle"></div>
+        <div class="hbottom"></div>
+        <div class="vleft"></div>
+        <div class="vright top"></div>
+        <div class="vright bottom"></div>
+      </div>
+    </div>
+
+    <div class="glyph" id="a">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom left"></div>
+      <div class="hbottom right"></div>
+      <div class="vleft"></div>
+      <div class="vright"></div>
+    </div>
+
+    <div class="glyph" id="b">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+      <div class="vright"></div>
+    </div>
+
+    <div class="glyph" id="c">
+      <div class="htop"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+      <div class="vright top"></div>
+      <div class="vright bottom"></div>
+    </div>
+
+    <div class="glyph" id="d">
+      <div class="htop"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+      <div class="vright"></div>
+    </div>
+
+    <div class="glyph" id="e">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+      <div class="vright top"></div>
+      <div class="vright bottom"></div>
+    </div>
+
+    <div class="glyph" id="f">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+      <div class="vright top"></div>
+    </div>
+
+    <div class="glyph" id="g">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+      <div class="vright bottom"></div>
+    </div>
+
+    <div class="glyph" id="h">
+      <div class="htop left"></div>
+      <div class="htop right"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom left"></div>
+      <div class="hbottom right"></div>
+      <div class="vleft"></div>
+      <div class="vright"></div>
+    </div>
+
+    <div class="glyph" id="i">
+      <div class="htop"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+    </div>
+
+    <div class="glyph" id="j">
+      <div class="htop"></div>
+      <div class="hbottom"></div>
+      <div class="vleft bottom"></div>
+      <div class="vright"></div>
+    </div>
+
+    <div class="glyph" id="k">
+      <div class="htop left"></div>
+      <div class="htop right"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom left"></div>
+      <div class="hbottom right"></div>
+      <div class="vleft"></div>
+      <div class="vright top"></div>
+      <div class="vright bottom"></div>
+    </div>
+
+    <div class="glyph" id="l">
+      <div class="htop"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+      <div class="vright bottom"></div>
+    </div>
+
+    <div class="glyph" id="m">
+      <div class="htop"></div>
+      <div class="hbottom left"></div>
+      <div class="hbottom middle"></div>
+      <div class="hbottom right"></div>
+      <div class="vleft"></div>
+      <div class="vmiddle"></div>
+      <div class="vright"></div>
+    </div>
+
+    <div class="glyph" id="n">
+      <div class="htop"></div>
+      <div class="hbottom left"></div>
+      <div class="hbottom right"></div>
+      <div class="vleft"></div>
+      <div class="vright"></div>
+    </div>
+
+    <div class="glyph" id="o">
+      <div class="htop"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+      <div class="vright"></div>
+    </div>
+
+    <div class="glyph" id="p">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+      <div class="vright top"></div>
+    </div>
+
+    <div class="glyph" id="q">
+      <div class="htop"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+      <div class="vleft bottom"></div>
+      <div class="vright"></div>
+    </div>
+
+    <div class="glyph" id="r">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom left"></div>
+      <div class="hbottom right"></div>
+      <div class="vleft"></div>
+      <div class="vright top"></div>
+      <div class="vright bottom"></div>
+    </div>
+
+    <div class="glyph" id="s">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom"></div>
+      <div class="vleft top"></div>
+      <div class="vleft bottom"></div>
+      <div class="vright top"></div>
+      <div class="vright bottom"></div>
+    </div>
+
+    <div class="glyph" id="t">
+      <div class="htop"></div>
+      <div class="hbottom"></div>
+      <div class="vleft top"></div>
+      <div class="vleft"></div>
+      <div class="vright top"></div>
+    </div>
+
+    <div class="glyph" id="u">
+      <div class="htop left"></div>
+      <div class="htop right"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+      <div class="vright"></div>
+    </div>
+
+    <div class="glyph" id="v">
+      <div class="htop left"></div>
+      <div class="htop right"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+      <div class="vright"></div>
+    </div>
+
+    <div class="glyph" id="w">
+      <div class="htop left"></div>
+      <div class="htop middle"></div>
+      <div class="htop right"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+      <div class="vmiddle"></div>
+      <div class="vright"></div>
+    </div>
+
+    <div class="glyph" id="x">
+      <div class="htop left"></div>
+      <div class="htop right"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom left"></div>
+      <div class="hbottom right"></div>
+      <div class="vleft top"></div>
+      <div class="vleft bottom"></div>
+      <div class="vright top"></div>
+      <div class="vright bottom"></div>
+    </div>
+
+    <div class="glyph" id="y">
+      <div class="htop left"></div>
+      <div class="htop right"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom"></div>
+      <div class="vleft top"></div>
+      <div class="vleft bottom"></div>
+      <div class="vright top"></div>
+    </div>
+
+    <div class="glyph" id="z">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hmiddle dot"></div>
+      <div class="hbottom"></div>
+      <div class="vleft top"></div>
+      <div class="vleft bottom"></div>
+      <div class="vright top"></div>
+      <div class="vright bottom"></div>
+    </div>
+
+    <div class="glyph" id="space">
+    </div>
+
+    <div class="glyph" id="zero">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+      <div class="vright"></div>
+    </div>
+
+    <div class="glyph" id="one">
+      <div class="htop"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+    </div>
+
+    <div class="glyph" id="two">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom"></div>
+      <div class="vleft bottom"></div>
+      <div class="vright top"></div>
+    </div>
+
+    <div class="glyph" id="three">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom"></div>
+      <div class="vleft top"></div>
+      <div class="vleft bottom"></div>
+      <div class="vright"></div>
+    </div>
+
+    <div class="glyph" id="four">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom"></div>
+      <div class="vleft top"></div>
+      <div class="vright"></div>
+    </div>
+
+    <div class="glyph" id="five">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom"></div>
+      <div class="vleft top"></div>
+      <div class="vright bottom"></div>
+    </div>
+
+    <div class="glyph" id="six">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom"></div>
+      <div class="vleft"></div>
+      <div class="vright bottom"></div>
+    </div>
+
+    <div class="glyph" id="seven">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom"></div>
+      <div class="vleft top"></div>
+      <div class="vright top"></div>
+      <div class="vright bottom"></div>
+    </div>
+
+    <div class="glyph" id="eight">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom"></div>
+      <div class="vleft top"></div>
+      <div class="vleft bottom"></div>
+      <div class="vright top"></div>
+      <div class="vright bottom"></div>
+    </div>
+
+    <div class="glyph" id="nine">
+      <div class="htop"></div>
+      <div class="hmiddle"></div>
+      <div class="hbottom"></div>
+      <div class="vleft top"></div>
+      <div class="vright"></div>
+    </div>
+
+  </div>
+
+</section>
 
 </body>
 
