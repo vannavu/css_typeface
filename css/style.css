@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
 * {
   box-sizing: border-box;
 }
@@ -7,11 +9,11 @@ html {
 }
 
 body {
+  display: block;
   width: 100%;
   /*background: white;*/
   margin: 0;
-  background-image: url("../r_place_blue.gif");
-  background-color: black;
+  background-image: url();
   background-size: 100%;
   z-index: 1;
 }
@@ -19,6 +21,7 @@ body {
 :root {
   --glyph_width: 14.5rem;
   --glyph_height: calc(var(--glyph_width) * 7 / 14.5);
+  --new_height: 0;
   --hstroke: calc(var(--glyph_height) * 0.285);
   --vstroke: 1px;
   --stroke_color: white;
@@ -31,16 +34,30 @@ body {
 
 .wrapper {
   position: relative;
-  width: 100%;
+  width: calc(100% - 2 * var(--side_bearings));
   margin: 0;
 }
 
 #character_set .wrapper {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 75%;
+  display: inline-block;
+  vertical-align: top;
+  top: 7%;
+  left: 3%;
+  width: 71%;
+}
+
+p {
+  position: absolute;
+  display: inline-block;
+  vertical-align: top;
+  top: 7%;
+  right: 3%;
+  width: 20%;
+  margin: 0;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 14px;
+  color: blue;
 }
 
 section#character_set {
@@ -50,9 +67,22 @@ section#character_set {
   top: 0;
   left: 0;
   width: 100%;
-  border-right: 3rem solid #1A1A1A;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255,255,255,0.95);
   height: 100vh;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem;
+  background-color: blue;
+  height: 100vh;
+}
+
+.bar:hover{
+  background-color: #0042FF;
+  opacity: 0.95;
 }
 
 section#text {
@@ -60,22 +90,21 @@ section#text {
   z-index: 1;
   width: 100%;
   margin: auto;
-  padding-left: 3rem;
-  mix-blend-mode: multiply;
-  --stroke_color: silver;
+  padding-left: calc(3rem + 1.5 * var(--side_bearings));
+  --stroke_color: blue;
 }
 
 .word {
   position: relative;
   display: block;
   width: auto;
-  margin: 3rem 0;
+  margin-bottom: 2.25rem;
   font-size: 0;
   white-space: nowrap;
 }
 
 #main .word {
-  margin: calc(var(--side_bearings) * 2) auto;
+  margin: calc(30vh / 8 ) auto;
 }
 
 #main .glyph {
@@ -92,8 +121,10 @@ section#text {
   top: 0;
 }
 
-.word .glyph:hover {
+#main .word .glyph:hover {
   cursor: pointer;
+  --stroke_color: #0042FF;
+  opacity: 0.95;
 }
 
 .htop, .hmiddle, .hbottom, .vleft, .vmiddle, .vright, .left, .right, .top, .bottom {
@@ -640,7 +671,7 @@ section#text {
 
 #one .htop {
   width: 40%;
-  left: 15%;
+  left: 15.25%;
 }
 
 #one .vleft {
@@ -1115,8 +1146,10 @@ section#truth .word .glyph {
 */
 
 .rectangle {
+  --stroke_color: blue;
   --num_char: 9.33;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+  margin-bottom: 5rem;
 }
 
 .abcdef {
@@ -1171,5 +1204,20 @@ section#truth .word .glyph {
 
 .pixels_not_atoms {
   --num_char: 15.75;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.users_not_people {
+  --num_char: 15.45;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.consumption {
+  --num_char: 11.575;
+  --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+}
+
+.efficiency {
+  --num_char: 10.15;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
 }
