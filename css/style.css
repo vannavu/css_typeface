@@ -32,7 +32,7 @@ body {
 }
 
 .blur {
-    --blur_amount: 10px;
+    --blur_amount: 18px;
     --opacity_amount: 0.5;
     position: absolute;
     display: block;

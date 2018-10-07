@@ -52,6 +52,8 @@ $(document).ready(function(){
   var opacity_constant = 0;
   var newHeight;
   $("#text .word .glyph").click(function() {
+    click_count = click_count + 1;
+    blur_constant = 18 - click_count;
     if (direction == 0) {
       var random_width = Math.floor($(".wrapper").width() * Math.random() * 0.5) + 20;
       direction = 1;
@@ -59,11 +61,12 @@ $(document).ready(function(){
         width: random_width,
       }, random_width * 6, function(){
       });
+      $(".blur").css({
+        "--blur_amount": blur_constant + 'px',
+      });
     }
     else {
       newHeight = $(document).height();
-      click_count = click_count + 1;
-      blur_constant = 10 - click_count * 0.5;
       $(".blur").css({
         "height": newHeight,
         "transition": "height 1s",
