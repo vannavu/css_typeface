@@ -3,27 +3,27 @@ $(document).ready(function(){
 
   var background = Math.random() * 5;
   if (0 < background && background <=1) {
-    $("body").css({
+    $(".blur").css({
       'background-image': 'url("backgrounds/facebook.jpeg")'
     });
   }
   else if (1 < background && background <= 2) {
-    $("body").css({
+    $(".blur").css({
       'background-image': 'url("backgrounds/pinterest.jpeg")'
     });
   }
   else if (2 < background && background <= 3) {
-    $("body").css({
+    $(".blur").css({
       'background-image': 'url("backgrounds/youtube.jpeg")'
     });
   }
   else if (3 < background && background <= 4) {
-    $("body").css({
+    $(".blur").css({
       'background-image': 'url("backgrounds/twitter.jpeg")'
     });
   }
   else {
-    $("body").css({
+    $(".blur").css({
       'background-image': 'url("backgrounds/instagram.jpeg")'
     });
   }
@@ -47,6 +47,10 @@ $(document).ready(function(){
   });
 
   var direction = 0;
+  var click_count = 0;
+  var blur_constant = 0;
+  var opacity_constant = 0;
+  var newHeight;
   $("#text .word .glyph").click(function() {
     if (direction == 0) {
       var random_width = Math.floor($(".wrapper").width() * Math.random() * 0.5) + 20;
@@ -57,6 +61,14 @@ $(document).ready(function(){
       });
     }
     else {
+      newHeight = $(document).height();
+      click_count = click_count + 1;
+      blur_constant = 10 - click_count * 0.5;
+      $(".blur").css({
+        "height": newHeight,
+        "transition": "height 1s",
+        "--blur_amount": blur_constant + 'px',
+      });
       var random_height = Math.floor($(".wrapper").height() * Math.random() * 0.3) + 40;
       direction = 0;
       $(this).animate({
@@ -126,6 +138,7 @@ $(document).ready(function(){
         });
       }
     }
+
   });
 
 });

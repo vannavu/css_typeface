@@ -11,11 +11,8 @@ html {
 body {
   display: block;
   width: 100%;
-  /*background: white;*/
   margin: 0;
-  background-image: url();
-  background-size: 100%;
-  z-index: 1;
+  z-index: 0;
 }
 
 :root {
@@ -30,6 +27,23 @@ body {
   --button_on: blue;
   --button_off: darkgray;
   --height_transition: 0;
+  --blur_amount: 10px;
+  --opacity_amount: 0.75;
+}
+
+.blur {
+    --blur_amount: 10px;
+    --opacity_amount: 0.5;
+    position: absolute;
+    display: block;
+    background-image: url();
+    background-size: 100%;
+    filter: blur(var(--blur_amount)) opacity(var(--opacity_amount));
+    width: 100%;
+    min-height: 100vh;
+    z-index: 0;
+    margin: 0;
+    top: 0;
 }
 
 .wrapper {
@@ -92,7 +106,7 @@ section#text {
   width: 100%;
   margin: auto;
   padding-left: calc(3rem + 1.5 * var(--side_bearings));
-  --stroke_color: blue;
+  --stroke_color: black;
 }
 
 .word {
@@ -1181,6 +1195,7 @@ section#truth .word .glyph {
 ._456789 {
   --num_char: 5.825;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+  margin-bottom: 0;
 }
 
 .edge {
@@ -1201,6 +1216,7 @@ section#truth .word .glyph {
 .expansion {
   --num_char: 9.425;
   --glyph_width: calc(100% / var(--num_char) - 2 * var(--side_bearings));
+  margin-bottom: 0;
 }
 
 .pixels_not_atoms {
