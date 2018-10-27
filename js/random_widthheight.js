@@ -1,6 +1,7 @@
 /* rational */
 $(document).ready(function(){
 
+/*
   var background = Math.random() * 5;
   if (0 < background && background <=1) {
     $(".blur").css({
@@ -27,7 +28,7 @@ $(document).ready(function(){
       'background-image': 'url("backgrounds/instagram.jpeg")'
     });
   }
-
+*/
   var characters_shown = false;
   $("section#character_set").click(function() {
     if (characters_shown == false) {
@@ -61,16 +62,17 @@ $(document).ready(function(){
         width: random_width,
       }, random_width * 6, function(){
       });
+      /*
       $(".blur").css({
         "--blur_amount": blur_constant + 'px',
-      });
+      });*/
     }
     else {
       newHeight = $(document).height();
       $(".blur").css({
         "height": newHeight,
         "transition": "height 1s",
-        "--blur_amount": blur_constant + 'px',
+        /*"--blur_amount": blur_constant + 'px',*/
       });
       var random_height = Math.floor($(".wrapper").height() * Math.random() * 0.3) + 40;
       direction = 0;

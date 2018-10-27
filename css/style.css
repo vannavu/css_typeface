@@ -38,8 +38,8 @@ body {
     display: block;
     background-image: url();
     background-size: 100%;
-    filter: blur(var(--blur_amount)) opacity(var(--opacity_amount));
-    width: 100%;
+    filter: blur(var(--blur_amount));
+    min-width: 100%;
     min-height: 100vh;
     z-index: 0;
     margin: 0;
